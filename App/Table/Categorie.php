@@ -1,13 +1,15 @@
 <?php
 namespace App\Table;
-use App\App;
+use App\Database;
+use \PDO;
 
 class Categorie {
 
-    private static $table = 'categories';
+    public static function getAll() {
+        $db = new Database('Blog');
+        $pdo = $db->getPDO();
 
-    public static function all() {
-        return App::getDb()->query(" SELECT * FROM " . self::$table . ";" , __CLASS__);
+        return $pdo->query( "SELECT * FROM categories" ) ->fetchAll(PDO::FETCH_ASSOC); //renvoie le tableau assoc des résultats
     }
 
 }

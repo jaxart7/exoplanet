@@ -1,7 +1,3 @@
-<h1>Home page</h1>
-
-<p><a href="index.php?p=single">single</a></p>
-
 <div class="row">
 
     <div class="col-sm-8">
@@ -17,7 +13,16 @@
     </div>
 
     <div class="col-sm-4">
+        <h3>Liste des categories :</h3>
         <ul>
+            <pre>
+            <?php
+                $categories = App\Table\Categorie::getAll();
+                foreach ($categories as $categorie) {
+                    echo '<li class="">' . ucfirst($categorie["nom"]) . '</li>';
+                }
+            ?>
+            </pre>
         </ul>
     </div>
 </div>

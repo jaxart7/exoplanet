@@ -17,7 +17,7 @@ class Database {
         $this->db_host = $db_host;
     }
 
-    private function getPDO() {
+    public function getPDO() {
         if ($this->pdo === null) { // une seule connexion à la BDD
         $pdo = new PDO('mysql:dbname=Blog;host=localhost', 'jaxart', 'test', array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
