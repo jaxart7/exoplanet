@@ -2,12 +2,15 @@
 
     <div class="col-sm-8">
 
-        <?php foreach ( App\Table\Article::getLast() as $post ): ?>
+        <?php
+            $articles = App\Table\Article::getAll();
+            foreach ( $articles as $article ): //liste des articles
+        ?>
             <h2 class="">
-                <a href="<?= $post->getUrl(); ?>"><?= $post->titre; ?></a>
+                <a href=""><?= ucfirst($article['titre']); ?></a>
             </h2>
-            <p>Catégorie : <em><?= $post->categorie?></em></p>
-            <p><?= $post->getExtrait(); ?></p>
+            <p>Catégorie : <em><?= ucfirst($article['categorie']); ?></em></p>
+            <p><?= $article['text']; ?></p>
         <?php endforeach; ?>
 
     </div>
