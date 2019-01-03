@@ -22,12 +22,15 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="../public/index.php">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="../public/index.php">Accueil</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="../public/index.php?p=exoplanets">Exoplanètes</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                <input class="form-control mr-sm-2" type="text" placeholder="Rechercher" aria-label="Search">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Rechercher</button>
             </form>
         </div>
     </nav>

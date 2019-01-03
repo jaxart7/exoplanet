@@ -1,6 +1,6 @@
 <div class="row">
 
-    <div class="col-sm-8">
+    <div class="col-sm-7 ml-auto">
 
         <?php
             $articles = App\Tables\Article::getAll();
@@ -17,7 +17,7 @@
 
     </div>
 
-    <div class="col-sm-4">
+    <div class="col-sm-3 mr-auto">
         <h3>Liste des categories :</h3>
         <ul>
             <pre>

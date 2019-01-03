@@ -1,7 +1,6 @@
 <?php
 namespace App\Tables;
 use App\Database;
-use App\Tables\Table;
 use \PDO;
 
 class Article extends Table {
