@@ -3,15 +3,17 @@
     <div class="col-sm-8">
 
         <?php
-            $articles = App\Table\Article::getAll();
-            foreach ( $articles as $article ): //liste des articles
+            $articles = App\Tables\Article::getAll();
+            foreach ($articles as $article):
         ?>
             <h2 class="">
-                <a href=""><?= ucfirst($article['titre']); ?></a>
+                <p><a href="<?= App\Tables\Article::getUrl($article->id) ;?>" ><?= ucfirst($article->titre); ?></a></p>
             </h2>
-            <p>Catégorie : <em><?= ucfirst($article['categorie']); ?></em></p>
-            <p><?= $article['text']; ?></p>
+            <p>Catégorie : <em><?= ucfirst($article->categorie); ?></em></p>
+            <p><?= $article->presentation; ?></p>
         <?php endforeach; ?>
+
+
 
     </div>
 
@@ -20,9 +22,9 @@
         <ul>
             <pre>
             <?php
-                $categories = App\Table\Categorie::getAll();
+                $categories = App\Tables\Categorie::getAll();
                 foreach ($categories as $categorie) {
-                    echo '<li class="">' . ucfirst($categorie["nom"]) . '</li>';
+                    echo '<li class="">' . ucfirst($categorie->categorie) . '</li>';
                 }
             ?>
             </pre>

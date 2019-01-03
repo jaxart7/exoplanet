@@ -1,8 +1,10 @@
-<h1>Single page</h1>
-
 <?php
-$post = $db->prepare('SELECT * FROM News WHERE id = ? ', [$_GET['id']], 'App\Table\Article', true );
-?>
-<h1> <?= $post->titre; ?></h1>
+echo 'id de l article : ' .$_GET['id'];
+$idArticle = $_GET['id'];
 
-<p> <?= $post->text; ?></p>
+$article = App\Tables\Article::getOne($idArticle);
+?>
+
+<h1> <?= $article->titre; ?></h1>
+
+<p> <?= $article->contenu; ?></p>
