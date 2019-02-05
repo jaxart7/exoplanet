@@ -16,6 +16,8 @@ if ($p === 'home') {
     require '../pages/single.php' ;
 } elseif ($p === 'exoplanets') {
     require '../pages/exoplanets.php' ;
+} elseif ($p === 'search') {
+    require '../pages/search.php' ;
 }
 
 $content = ob_get_clean();

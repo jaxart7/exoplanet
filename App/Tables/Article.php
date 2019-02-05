@@ -23,6 +23,6 @@ class Article extends Table {
     public static function getOne($id) { // pour afficher un article sur la single page
         $pdo = self::getPDOHere();
         $req = "SELECT * FROM news WHERE id = $id";
-        return $pdo->query($req) ->fetch(PDO::FETCH_OBJ);
-  }
+        return $pdo->query($req) ->fetch(PDO::FETCH_OBJ); //renvoie un objet
+    }
 }

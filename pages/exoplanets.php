@@ -10,9 +10,6 @@
     <tbody>
         <?php
         $exoplanets = App\Tables\Exoplanet::getAll();
-        // echo '<pre>';
-        // var_dump($exoplanets);
-        // echo '</pre>';
         foreach($exoplanets as $exoplanet):
         ?>
 

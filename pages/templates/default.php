@@ -21,16 +21,16 @@
 
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="../public/index.php">Accueil</a>
                 </li>
-                <li>
+                <li class="nav-item">
                     <a class="nav-link" href="../public/index.php?p=exoplanets">Exoplanètes</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Rechercher" aria-label="Search">
-                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Rechercher</button>
+            <form class="form-inline my-2 my-lg-0" action="../public/index.php?" method="get">
+                <input class="form-control mr-sm-2" type="text" placeholder="Votre recherche ..." name="search">
+                <button type="submit" class="btn btn-secondary my-2 my-sm-0">Rechercher</button>
             </form>
         </div>
     </nav>

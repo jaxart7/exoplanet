@@ -18,6 +18,11 @@
     </div>
 
     <div class="col-sm-3 mr-auto">
+
+        <?php
+        $search = App\Tables\Table::search('la');
+        ?>
+
         <h3>Liste des categories :</h3>
         <ul>
             <pre>
